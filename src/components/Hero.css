@@ -1,0 +1,170 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url('/vaishu.png');
+  background-size: cover;
+  background-position: 68% top;
+  background-repeat: no-repeat;
+}
+
+.hero__mobile-photo {
+  display: none;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(9, 9, 9, 0.92) 0%,
+    rgba(9, 9, 9, 0.75) 35%,
+    rgba(9, 9, 9, 0.2) 60%,
+    rgba(9, 9, 9, 0.1) 100%
+  );
+  z-index: 0;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  padding: 250px 80px 80px 140px;
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero__heading {
+  font-size: clamp(44px, 5.5vw, 76px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.hero__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hero__intro-role {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.hero__intro-bio {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 420px;
+}
+
+.hero__socials {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.hero__social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.hero__social-link:hover {
+  color: var(--text-primary);
+}
+
+/* Tablet landscape */
+@media (max-width: 1200px) {
+  .hero__content {
+    padding: 220px 80px 80px 100px;
+    max-width: 620px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 1024px) {
+  .hero {
+    background-position: 75% top;
+  }
+
+  .hero::before {
+    background: linear-gradient(
+      to right,
+      rgba(9, 9, 9, 0.95) 0%,
+      rgba(9, 9, 9, 0.85) 45%,
+      rgba(9, 9, 9, 0.35) 75%,
+      rgba(9, 9, 9, 0.15) 100%
+    );
+  }
+
+  .hero__content {
+    padding: 180px 60px 60px 80px;
+    max-width: 580px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    background-image: none;
+    min-height: unset;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .hero__content {
+    padding: 120px 32px 40px;
+    max-width: 100%;
+    gap: 40px;
+  }
+
+  .hero__intro-bio {
+    max-width: 100%;
+  }
+
+  .hero__mobile-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .hero__content {
+    padding: 130px 24px 56px;
+    gap: 32px;
+  }
+
+  .hero__intro-role {
+    font-size: 16px;
+  }
+
+  .hero__intro-bio {
+    font-size: 14px;
+  }
+
+  .hero__socials {
+    gap: 20px;
+  }
+
+  .hero__social-link {
+    width: 32px;
+    height: 32px;
+  }
+}
