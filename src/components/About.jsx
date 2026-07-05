@@ -80,8 +80,12 @@ export default function About() {
               document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
             }}>
               View Projects
-            </a>
-            <a href="#" className="about__cta about__cta--arrow">
+             </a>
+            <a
+              href="/resume.pdf"
+              download="Vaishnavi_Samala_Resume.pdf"
+              className="about__cta about__cta--arrow"
+            >
               Download Resume <span>↓</span>
             </a>
           </div>
