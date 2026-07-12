@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import './Hero.css'
 
+<<<<<<< HEAD
 const competencies = [
   { name: 'Threat Detection', detail: 'ML-based anomaly predictors' },
   { name: 'Data Visualization', detail: 'Tableau & PowerBI dashboards' },
@@ -14,6 +15,14 @@ const stats = [
   { value: '100%', label: 'hands-on project commitment' },
   { value: '3+', label: 'security tools designed' },
   { value: '15+', label: 'data dashboards compiled' },
+=======
+const socialLinks = [
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/vaishnavi-samala/', icon: <Linkedin size={20} strokeWidth={1.5} /> },
+  { label: 'GitHub',    href: 'https://github.com/vaishh-samala', icon: <SiGithub size={20} /> },
+  { label: 'Instagram', href: 'https://www.instagram.com/vaishnavi_samala/', icon: <SiInstagram size={20} /> },
+  { label: 'Mail',      href: 'mailto:samalavaish77@gmail.com', icon: <Mail size={20} strokeWidth={1.5} /> },
+  { label: 'Resume',    href: '/resume.pdf', icon: <FileText size={20} strokeWidth={1.5} /> },
+>>>>>>> a79cd903fcf9baf14ff6c8544eecae1456bf0a47
 ]
 
 const fadeUp = (delay = 0) => ({
