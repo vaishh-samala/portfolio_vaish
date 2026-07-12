@@ -67,7 +67,6 @@ export default function About() {
           <p className="about__subheading">Short, human context on academic background and real-world experience.</p>
         </FadeUp>
 
-<<<<<<< HEAD
         <div className="about__grid">
           {/* Left Column: Biography */}
           <div className="about__bio-col">
@@ -80,36 +79,6 @@ export default function About() {
                 Currently pursuing a Bachelor of Technology in Cybersecurity at Geethanjali College of Engineering and Technology (graduating March 2026). My background bridges the gap between active threat defense and detailed data analytics—from coding cryptographic image encodings in Python to architecting interactive dashboards in Tableau and writing optimized SQL queries.
               </p>
             </FadeUp>
-=======
-        <FadeUp delay={0.1}>
-          <p className="about__bio">
-            B.Tech CSE (Cyber Security) student at Geethanjali College of Engineering &
-            Technology, graduating March 2026. I interned at Supraja Technologies as a
-            Cybersecurity Intern, building Python-based security tools and working with
-            databases and version control across a full development lifecycle. Alongside
-            security, I've built a strong foundation in data analysis - cleaning datasets,
-            writing complex SQL queries with CTEs and window functions, and building
-            interactive Tableau dashboards. Aspiring to work where security and data meet
-            to drive real decisions.
-          </p>
-        </FadeUp>
-
-        <FadeUp delay={0.15}>
-          <div className="about__ctas">
-            <a href="#work" className="about__cta" onClick={(e) => {
-              e.preventDefault()
-              document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
-            }}>
-              View Projects
-             </a>
-            <a
-              href="/resume.pdf"
-              download="Vaishnavi_Samala_Resume.pdf"
-              className="about__cta about__cta--arrow"
-            >
-              Download Resume <span>↓</span>
-            </a>
->>>>>>> a79cd903fcf9baf14ff6c8544eecae1456bf0a47
           </div>
 
           {/* Right Column: Education & Experience timelines */}
@@ -156,8 +125,6 @@ export default function About() {
             </FadeUp>
           </div>
         </div>
-
-
       </div>
     </section>
   )
