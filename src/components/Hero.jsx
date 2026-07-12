@@ -9,13 +9,6 @@ const competencies = [
   { name: 'Python Engineering', detail: 'Steganography & security script' }
 ]
 
-const stats = [
-  { value: '+4', label: 'years academic foundation' },
-  { value: '100%', label: 'hands-on project commitment' },
-  { value: '3+', label: 'security tools designed' },
-  { value: '15+', label: 'data dashboards compiled' }
-]
-
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -63,22 +56,6 @@ export default function Hero() {
             <img src="/vaishu.png" className="hero__photo" alt="Vaishnavi Samala" />
           </div>
         </motion.div>
-      </div>
-
-      {/* Stats fold row matching inspiration */}
-      <div className="hero__stats-fold">
-        <div className="hero__stats-grid">
-          {stats.map((stat, i) => (
-            <motion.div 
-              key={stat.label} 
-              className="hero__stat-card"
-              {...fadeUp(0.1 + i * 0.05)}
-            >
-              <h2 className="hero__stat-val serif-heading">{stat.value}</h2>
-              <p className="hero__stat-label">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
       </div>
 
       {/* Core Competencies bar */}
