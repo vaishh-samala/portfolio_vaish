@@ -5,17 +5,37 @@
 }
 
 :root {
-  --bg: #090909;
-  --bg-card: #131313;
-  --bg-card-2: #1a1a1a;
-  --bg-pill: #1c1c1c;
+  /* Default: Light Warm Cream Theme */
+  --bg: #f8f3f0;
+  --bg-card: #ffffff;
+  --bg-card-2: #faf6f3;
+  --bg-pill: #eae1db;
+  --text-primary: #121212;
+  --text-secondary: #5f5f5f;
+  --text-muted: #8e8580;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-card: rgba(0, 0, 0, 0.06);
+  --accent: #e25b7c; /* Rose Pink */
+  --accent-rgb: 226, 91, 124;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-script: 'Satisfy', cursive;
+  --font: var(--font-sans);
+}
+
+.dark-mode {
+  /* Dark Theme */
+  --bg: #0b0b0b;
+  --bg-card: #141414;
+  --bg-card-2: #1c1c1c;
+  --bg-pill: #222222;
   --text-primary: #ffffff;
-  --text-secondary: #999999;
-  --text-muted: #555555;
-  --border: #222222;
-  --border-card: #1f1f1f;
-  --accent: #ffffff;
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --text-secondary: #a3a3a3;
+  --text-muted: #666666;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(255, 255, 255, 0.06);
+  --accent: #ff8fa9; /* Lighter Rose Pink for dark contrast */
+  --accent-rgb: 255, 143, 169;
 }
 
 html {
@@ -30,6 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
 
 a {
@@ -42,6 +63,7 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  color: inherit;
 }
 
 img {
@@ -50,31 +72,44 @@ img {
 }
 
 .section {
-  padding: 100px 140px;
-  max-width: 1600px;
+  padding: 48px 140px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+/* Common Text Accents */
+.italic-script {
+  font-family: var(--font-script);
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+  text-transform: none !important;
+}
+
+.serif-heading {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+/* Custom transitions for elements */
+div, section, button, a {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 @media (max-width: 1024px) {
   .section {
-    padding: 80px 60px;
+    padding: 40px 60px;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 72px 40px;
+    padding: 36px 40px;
   }
 }
 
 @media (max-width: 640px) {
   .section {
-    padding: 64px 32px;
-  }
-}
-
-@media (max-width: 400px) {
-  .section {
-    padding: 56px 20px;
+    padding: 32px 24px;
   }
 }

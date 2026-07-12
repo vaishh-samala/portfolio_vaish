@@ -47,7 +47,8 @@ export default function Tools() {
     <section className="tools" id="tools">
       <div className="section">
         <FadeUp>
-          <h2 className="tools__heading">Tech Stack</h2>
+          <span className="tools__eyebrow">TECH STACK</span>
+          <h2 className="tools__heading serif-heading">The utilities that power the systems.</h2>
         </FadeUp>
         <FadeUp delay={0.1}>
           <div className="tools__grid">
@@ -59,8 +60,8 @@ export default function Tools() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.04, duration: 0.4 }}
-                whileHover={{ scale: 1.08 }}
+                transition={{ delay: i * 0.03, duration: 0.4 }}
+                whileHover={{ y: -3 }}
               >
                 <div className="tools__icon">{tool.icon}</div>
                 <span className="tools__name">{tool.name}</span>
@@ -72,3 +73,4 @@ export default function Tools() {
     </section>
   )
 }
+

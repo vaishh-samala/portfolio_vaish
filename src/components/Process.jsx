@@ -1,56 +1,38 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { Search, Scissors, ShieldAlert, Sparkles } from 'lucide-react'
 import './Process.css'
 
 const steps = [
   {
-    title: 'Understanding the Brief',
-    desc: 'I break down the problem - aligning business goals, user needs, and constraints to set a clear direction before touching any design tool.',
+    title: 'Evidence before opinions',
+    desc: 'Research and data validation come first, then security structures, then the actual execution. I build on verifiable facts.',
+    icon: <Search size={22} strokeWidth={1.5} />
   },
   {
-    title: 'Research & Exploration',
-    desc: 'I explore user behavior, data, and patterns to uncover insights that actually influence decisions - not just validate them.',
+    title: 'Cuts reveal the seniority',
+    desc: 'What I leave out matters as much as what is written. I keep scripts, schemas, and dashboards clean, removing unnecessary clutter.',
+    icon: <Scissors size={22} strokeWidth={1.5} />
   },
   {
-    title: 'Design & Iteration',
-    desc: 'From rough wireframes to polished prototypes, each iteration is informed by feedback, tested assumptions, and refined clarity.',
+    title: 'AI should show its evidence',
+    desc: 'If using ML models or classifiers, the features, thresholds, and predictions must be clear and explainable for security audits.',
+    icon: <ShieldAlert size={22} strokeWidth={1.5} />
   },
   {
-    title: 'Handoff & Optimization',
-    desc: 'Clean specs, annotated flows, and close collaboration with engineers ensure the vision is built exactly as intended.',
+    title: 'Ship the usable path',
+    desc: 'I target the cleanest, most direct design that lets analysts and administrators react immediately without friction.',
+    icon: <Sparkles size={22} strokeWidth={1.5} />
   },
 ]
 
-function OrbIcon({ variant }) {
-  const fills = [
-    ['#4a4a4a', '#888', '#ccc'],
-    ['#333', '#666', '#aaa'],
-    ['#555', '#888', '#bbb'],
-    ['#3a3a3a', '#777', '#aaa'],
-  ]
-  const [d, m, l] = fills[variant] || fills[0]
-  return (
-    <svg viewBox="0 0 60 60" className="process__orb" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id={`g${variant}`} cx="35%" cy="30%" r="60%">
-          <stop offset="0%" stopColor={l} />
-          <stop offset="50%" stopColor={m} />
-          <stop offset="100%" stopColor={d} />
-        </radialGradient>
-      </defs>
-      <circle cx="30" cy="30" r="28" fill={`url(#g${variant})`} />
-      <path d="M30 8 Q48 22 42 38 Q28 52 14 40 Q6 24 30 8Z" fill="rgba(255,255,255,0.07)" />
-    </svg>
-  )
-}
-
 function FadeUp({ children, delay = 0 }) {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, margin: '-60px' })
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 28 }}
+      initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
     >
@@ -64,10 +46,13 @@ export default function Process() {
     <section className="process" id="process">
       <div className="section">
         <FadeUp>
-          <h2 className="process__heading">
-            Process? Yeah... I Have One.<br />
-            And creative toolkit.
+          <span className="process__eyebrow">HOW I WORK</span>
+          <h2 className="process__heading serif-heading">
+            Trust is a workflow, not a coat of paint.
           </h2>
+          <p className="process__subheading">
+            A working style shaped by security guidelines, rigorous analysis, and actionable dashboards where confidence is earned inside the tool.
+          </p>
         </FadeUp>
 
         <div className="process__grid">
@@ -75,9 +60,9 @@ export default function Process() {
             <FadeUp key={step.title} delay={0.1 + i * 0.08}>
               <div className="process__card">
                 <div className="process__card-icon">
-                  <OrbIcon variant={i} />
+                  {step.icon}
                 </div>
-                <h3 className="process__card-title">{step.title}</h3>
+                <h3 className="process__card-title serif-heading">{step.title}</h3>
                 <p className="process__card-desc">{step.desc}</p>
               </div>
             </FadeUp>

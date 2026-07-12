@@ -1,61 +1,103 @@
 .process {
   border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.process__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 16px;
 }
 
 .process__heading {
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  font-size: clamp(32px, 4.5vw, 56px);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  line-height: 1.1;
+  max-width: 800px;
+}
+
+.process__subheading {
+  font-size: 16px;
+  color: var(--text-secondary);
   margin-bottom: 64px;
+  max-width: 600px;
 }
 
 .process__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .process__card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
-  border-radius: 24px;
-  padding: 40px;
+  border-radius: 20px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 0;
-  transition: border-color 0.2s ease;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.02);
+}
+
+.dark-mode .process__card {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .process__card:hover {
-  border-color: var(--border);
+  border-color: var(--accent);
+  transform: translateY(-4px);
 }
 
 .process__card-icon {
-  margin-bottom: 40px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(226, 91, 124, 0.08);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
 }
 
-.process__orb {
-  width: 60px;
-  height: 60px;
+.dark-mode .process__card-icon {
+  background: rgba(255, 143, 169, 0.1);
 }
 
 .process__card-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 14px;
   letter-spacing: -0.01em;
 }
 
 .process__card-desc {
   font-size: 14px;
-  font-weight: 400;
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
-@media (max-width: 768px) {
+/* Responsiveness */
+@media (max-width: 1024px) {
   .process__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
+
+@media (max-width: 640px) {
+  .process__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .process__card {
+    padding: 24px;
+  }
+}
+

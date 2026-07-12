@@ -1,13 +1,23 @@
 .tools {
   border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.tools__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 16px;
 }
 
 .tools__heading {
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: clamp(32px, 4.5vw, 56px);
+  color: var(--text-primary);
+  margin-bottom: 56px;
   line-height: 1.1;
-  margin-bottom: 60px;
+  max-width: 800px;
 }
 
 .tools__grid {
@@ -21,26 +31,36 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 28px 16px;
+  gap: 14px;
+  padding: 24px 16px;
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: 16px;
+  transition: all 0.25s ease;
   cursor: default;
-  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .tools__item:hover {
-  border-color: var(--border);
-  background: var(--bg-card-2);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.dark-mode .tools__item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .tools__icon {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.tools__item:hover .tools__icon {
+  color: var(--accent);
 }
 
 .tools__icon svg {
@@ -49,10 +69,9 @@
 }
 
 .tools__name {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
   text-align: center;
 }
 
@@ -66,26 +85,24 @@
   .tools__grid {
     grid-template-columns: repeat(4, 1fr);
   }
-
   .tools__heading {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .tools__grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
   }
-
   .tools__item {
     padding: 20px 12px;
-    gap: 10px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .tools__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+

@@ -1,265 +1,227 @@
 .about {
   border-top: 1px solid var(--border);
+  background: var(--bg);
 }
 
-.about__label {
-  display: none;
+.about__eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 16px;
 }
 
 .about__heading {
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 40px;
-  line-height: 1.1;
-}
-
-.about__bio {
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text-secondary);
-  line-height: 1.75;
-  max-width: 820px;
-  margin-bottom: 40px;
-}
-
-.about__ctas {
-  display: flex;
-  gap: 48px;
-  margin-bottom: 80px;
-  flex-wrap: wrap;
-}
-
-.about__cta {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: clamp(32px, 4.5vw, 56px);
   color: var(--text-primary);
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  max-width: 800px;
 }
 
-.about__cta:hover {
-  border-color: var(--text-primary);
-}
-
-.about__cta--arrow span {
-  font-size: 18px;
-  transition: transform 0.2s ease;
-}
-
-.about__cta--arrow:hover span {
-  transform: translateY(2px);
-}
-
-.about__block {
+.about__subheading {
+  font-size: 16px;
+  color: var(--text-secondary);
   margin-bottom: 72px;
+  max-width: 600px;
 }
 
-.about__block-heading {
-  font-size: 22px;
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.about__bio-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__timeline-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__card-tag {
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.about__profile-headline {
+  font-size: clamp(24px, 3.2vw, 36px);
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.about__profile-text {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+.about__sub-block {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  margin-bottom: 32px;
+}
+
+.about__sub-block:last-child {
+  margin-bottom: 0;
+}
+
+.about__block-title {
+  font-size: 24px;
   color: var(--text-primary);
   margin-bottom: 24px;
 }
 
-.about__cards {
+/* Timelines */
+.about__timeline {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border-card);
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--bg-card);
+  gap: 24px;
 }
 
-.about__card {
+.about__timeline-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  padding: 24px 28px;
-  border-bottom: 1px solid var(--border-card);
 }
 
-.about__card:last-child {
-  border-bottom: none;
-}
-
-.about__card-logo {
-  width: 52px;
-  height: 52px;
+.about__timeline-badge {
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
   background: var(--bg-card-2);
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 13px;
   font-weight: 700;
   color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.about__card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+.about__timeline-details {
   flex: 1;
   min-width: 0;
 }
 
-.about__card-name {
-  font-size: 15px;
+.about__timeline-name {
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.3;
+  margin-bottom: 4px;
 }
 
-.about__card-sub {
+.about__timeline-degree {
   font-size: 14px;
   color: var(--text-secondary);
+  margin-bottom: 4px;
 }
 
-.about__card-period {
+.about__timeline-date {
   font-size: 12px;
   color: var(--text-muted);
-  margin-top: 2px;
 }
 
-.about__card-bullets {
-  margin-top: 16px;
+.about__timeline-bullets {
+  margin-top: 12px;
+  padding-left: 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-left: 16px;
+  gap: 6px;
 }
 
-.about__card-bullets li {
+.about__timeline-bullets li {
   font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
-.about__skills-section {
+/* Hobbies Section */
+.about__hobbies-section {
   border-top: 1px solid var(--border);
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
-.about__skills-heading {
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 40px;
-  line-height: 1.1;
-}
-
-.about__skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.about__skill-pill {
-  padding: 10px 20px;
-  background: var(--bg-pill);
-  border: 1px solid var(--border-card);
-  border-radius: 100px;
-  font-size: 14px;
-  font-weight: 400;
+.about__hobbies-heading {
+  font-size: 32px;
   color: var(--text-primary);
-  transition: background 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 8px;
 }
 
-.about__skill-pill:hover {
-  background: var(--bg-card-2);
-  border-color: var(--border);
+.about__hobbies-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-  .about__ctas {
-    gap: 28px;
-    margin-bottom: 60px;
-  }
+.about__hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
 
-  .about__block {
-    margin-bottom: 52px;
-  }
+.about__hobby-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
 
-  .about__card {
-    padding: 20px;
-    gap: 14px;
-  }
+.about__hobby-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
 
-  .about__card-logo {
-    width: 44px;
-    height: 44px;
-    font-size: 12px;
-    border-radius: 10px;
-  }
+.about__hobby-icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(226, 91, 124, 0.08);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
 
-  .about__card-bullets li {
-    font-size: 13px;
-  }
+.dark-mode .about__hobby-icon-box {
+  background: rgba(255, 143, 169, 0.1);
+}
 
-  .about__skills-section {
-    padding-top: 48px;
+.about__hobby-title {
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-bottom: 0;
+}
+
+.about__hobby-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  .about__bio {
-    font-size: 15px;
-    margin-bottom: 32px;
-  }
-
-  .about__ctas {
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 48px;
-  }
-
-  .about__block-heading {
-    font-size: 18px;
-    margin-bottom: 16px;
-  }
-
-  .about__card {
-    padding: 16px;
-    gap: 12px;
-  }
-
-  .about__card-logo {
-    width: 40px;
-    height: 40px;
-    font-size: 11px;
-  }
-
-  .about__card-name {
-    font-size: 14px;
-  }
-
-  .about__card-sub {
-    font-size: 13px;
-  }
-
-  .about__card-bullets {
-    padding-left: 12px;
-    margin-top: 12px;
-  }
-
-  .about__skill-pill {
-    padding: 8px 14px;
-    font-size: 13px;
-  }
-
-  .about__skills-section {
-    padding-top: 40px;
-  }
-}
