@@ -32,7 +32,8 @@ export default function Hero() {
           </h1>
 
           <p className="hero__description">
-            B.Tech CSE (Cyber Security) student graduating March 2026. Skilled in building python-based steganography tools, managing secure database infrastructures, and generating analytics dashboards that influence decisions.
+            B.Tech CSE (Cyber Security) student graduating March 2026.
+            Exploring the intersection of security and data to build smarter, more reliable solutions. This portfolio showcases my projects, technical skills, and continuous learning journey as I work toward creating meaningful impact through technology.
           </p>
 
           <div className="hero__actions">
