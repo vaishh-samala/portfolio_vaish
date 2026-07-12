@@ -1,6 +1,8 @@
 .preloader {
   position: fixed;
   inset: 0;
+  --accent: #ff8fa9;
+  --accent-rgb: 255, 143, 169;
   background-color: #0b0b0b;
   color: #ffffff;
   display: flex;
@@ -31,9 +33,25 @@
 }
 
 .preloader__content {
+  position: relative;
+  z-index: 1;
   text-align: center;
   max-width: 600px;
   padding: 0 24px;
+}
+
+.preloader__content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 320px;
+  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.24) 0%, rgba(11, 11, 11, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(15px);
 }
 
 .preloader__tagline-wrapper {
