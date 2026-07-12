@@ -33,7 +33,9 @@ const experience = [
     period: 'May 2025 - Aug 2025',
     location: 'Hyderabad, TS',
     bullets: [
-      'Built a python steganography utility encoding text data inside images, transmitted securely via SMTP protocols.'
+      'Built a python steganography utility encoding text data inside images, transmitted securely via SMTP protocols.',
+      'Designed database security layers and custom user role management panels, optimizing credential storage.',
+      'Collaborated within Git versioning workflows across iterative design, testing, and vulnerability auditing cycles.'
     ],
   },
 ]
@@ -74,7 +76,7 @@ export default function About() {
                 Creating Value Through Data and Technology.
               </h3>
               <p className="about__profile-text">
-                B.Tech Cybersecurity student with a growing interest in Data Analytics. I enjoy working on projects that combine analytical thinking, problem-solving, and technology. From exploring cybersecurity concepts to analyzing data and creating interactive dashboards, I continuously build practical skills through hands-on learning. This portfolio showcases my projects, technical expertise, and professional journey.
+                a B.Tech Cybersecurity student with a growing interest in Data Analytics. I enjoy working on projects that combine analytical thinking, problem-solving, and technology. From exploring cybersecurity concepts to analyzing data and creating interactive dashboards, I continuously build practical skills through hands-on learning. This portfolio showcases my projects, technical expertise, and professional journey.
               </p>
             </FadeUp>
           </div>
