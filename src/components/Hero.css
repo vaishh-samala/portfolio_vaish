@@ -15,7 +15,7 @@
   align-items: center;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 140px 80px;
+  padding: 40px 140px 32px;
   width: 100%;
 }
 
@@ -185,46 +185,11 @@
   50% { transform: translateY(-8px) rotate(4deg); }
 }
 
-/* Stats Fold Row */
-.hero__stats-fold {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg-card-2);
-  width: 100%;
-}
-
-.hero__stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 40px 140px;
-}
-
-.hero__stat-card {
-  text-align: left;
-  padding-right: 24px;
-}
-
-.hero__stat-val {
-  font-size: clamp(36px, 4vw, 56px);
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-
-.hero__stat-label {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  line-height: 1.4;
-}
-
 /* Core Competencies bar */
 .hero__competencies-fold {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 60px 140px 80px;
+  padding: 16px 140px 80px;
   width: 100%;
 }
 
@@ -268,14 +233,11 @@
 /* Responsiveness */
 @media (max-width: 1200px) {
   .hero__top-grid {
-    padding: 40px 60px 60px;
+    padding: 40px 60px 24px;
     gap: 40px;
   }
-  .hero__stats-fold .hero__stats-grid {
-    padding: 36px 60px;
-  }
   .hero__competencies-fold {
-    padding: 48px 60px 60px;
+    padding: 16px 60px 60px;
   }
 }
 
@@ -283,7 +245,7 @@
   .hero__top-grid {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-bottom: 48px;
+    padding-bottom: 20px;
   }
   .hero__left {
     align-items: center;
@@ -298,10 +260,6 @@
   .hero__right {
     order: -1; /* Image first on mobile/tablet */
   }
-  .hero__stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
   .hero__competencies-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -309,13 +267,10 @@
 
 @media (max-width: 768px) {
   .hero__top-grid {
-    padding: 20px 40px 48px;
-  }
-  .hero__stats-fold .hero__stats-grid {
-    padding: 32px 40px;
+    padding: 20px 40px 20px;
   }
   .hero__competencies-fold {
-    padding: 40px 40px 48px;
+    padding: 16px 40px 48px;
   }
   .hero__actions {
     flex-direction: column;
@@ -325,15 +280,10 @@
 
 @media (max-width: 640px) {
   .hero__top-grid {
-    padding: 20px 24px 40px;
-  }
-  .hero__stats-fold .hero__stats-grid {
-    padding: 28px 24px;
-    grid-template-columns: 1fr;
-    gap: 24px;
+    padding: 20px 24px 16px;
   }
   .hero__competencies-fold {
-    padding: 32px 24px 40px;
+    padding: 12px 24px 40px;
   }
   .hero__competencies-grid {
     grid-template-columns: 1fr;
